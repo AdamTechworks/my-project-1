@@ -8,23 +8,80 @@ body{
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: fixed;
+    font-family: "Ephesis", cursive;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 60px;
 }
 
 h1 {
   font-family: "Ephesis", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
-  font-size: 100px;
+  font-size: 120px;
 }
 
-.header-menu-item{
-    margin: 0;
-    padding: 25px;
-    color:rgb(80, 145, 201)
+h2 {
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 200px;
 }
+
+h3{
+    font-size: 40;
+}
+
+p{
+  font-weight: 500;
+  font-style: normal;
+  font-size: 120px;  
+}
+
 
 .header-nav-menu{
     margin: 0;
     padding: 80px;
     display:contents
+}
+
+.header-menu-item{
+    margin: 0;
+    padding: 25px;
+}
+
+.header-nav-menu2{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex;
+}
+
+.header-menu-item2{
+    margin: 0;
+    padding: 40px;
+}
+
+.multi-column-container{
+    display: flex;
+}
+
+.three-column-item{
+    width: calc(100% / 3 - 40px);
+    margin: 20px;
+    border: 5px solid rgb(113, 120, 187);
+    border-radius: 15px;
+    background-color: rgb(246, 255,246);
+    text-align: center;
+    color: rgb(41, 95, 175);
+}
+
+.three-column-item h2{
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
 }

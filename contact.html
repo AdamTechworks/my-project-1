@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <title> Contact </title>
+    <link rel="stylesheet" href="./styles/style.css">
+    
 </head>
     <header>
-        <h1>WonderVerseInk</h1>
             <nav>
-                <ul class="header-nav-menu">
+                <ul class="header-nav-menu2">
                     <li class="header-menu-item"><a href="./index.html">Home</a></li>
-                    <li class="header-menu-item"><a href="./contact.html">Contact</a></li>
-                    <li class="header-menu-item"><a href="./Bio.html">Bio</a></li>
                     <li class="header-menu-item"><a href="./gallery.html">Gallery</a></li>
+                    <li class="header-menu-item"><a href="./Bio.html">Bio</a></li>
+                    <li class="header-menu-item"><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
     </header>
 <body>
+        <h2>Contact</h2>
+
+        <form action="#" method="get">
+            <div class="form-row">
+                <label for="first-name">
+                    <div class="label-text">First Name:</div>
+                        <input type="text" name="first-name" id="first-name" required/>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label for="Last-name">
+                    <div class="label-text">Last Name:</div>
+                        <input type="text" name="Last-name" id="Last-name" required/>
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label for="email">
+                    <div class="label-text">Email:</div>
+                        <input type="email" name="email" id="email" required/>
+                </label>
+            </div>            
+            
+            <div class="form-row">
+                <label for="first-name">
+                    <div class="label-text">First Name:</div>
+                        <input type="tel" name="phone" required placeholder="XXX-XXX-XXXX"/>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <div class="label-text">Message:</div>
+                        <textarea name="message" cols="30" rows="10"></textarea>
+                </label>
+            </div>
+            <div class="form-row">
+                <button type="submit">Send</button>
+                <button type="reset">Clear</button>
+            </div>                  
+        </form>
     
 </body>
 </html>
