@@ -6,7 +6,7 @@ body{
     background-image: url(../images/Gogettta.png);
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: center auto;
+    background-position: center fixed;
     background-attachment: fixed;
 }
 
