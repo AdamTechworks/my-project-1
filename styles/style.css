@@ -8,35 +8,59 @@ body{
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: fixed;
-    font-family: "Ephesis", cursive;
+    margin: 0;
+    padding: 0;
 }
 
 /* Headings and Paragraphs */
-h1 {
+h1 { /*Home Page Title*/
   font-family: "Ephesis", cursive;
   font-weight: 500;
-  font-style: normal;
   font-size: 120px;
+  padding-left: 25px;
+  margin-bottom: -5%;
 }
 
-h2 {
+h2 { /*Page Titles*/
   font-family: "Ephesis", cursive;
   font-weight: 500;
   font-style: normal;
   font-size: 200px;
+  margin-left: 5%;
 }
 
-/* Navigation Menu */
+h3{ /*Gallery Image Titles*/
+  font-weight: 500;
+  font-style: italic;
+  font-size: 45px;
+  margin: 10px; 
+}
+
+.intro{
+    width: 50%;
+    margin-left: -40px; /* Adjusts intro paragraph position */
+}
+
+p{ /*Bio & Gallery Paragraphs*/
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Menu*/
+
 a{
     text-decoration: none;
     color: black;
-    font-size: 60px;
+    font-size: 80px;
+    font-family: "Ephesis", cursive;
 }
 
-.header-nav-menu{
+.header-nav-menu{ /*Navigation for home page*/
     margin: 0;
-    padding: 80px;
-    display:contents
+    padding: 0;
 }
 
 .header-menu-item{
@@ -44,12 +68,11 @@ a{
     padding: 25px;
 }
 
-.header-nav-menu2{
+.header-nav-menu2{ /*Navigation for bio, contact, gallery*/
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex;
 }
 
 /* Gallery Layout */
@@ -93,13 +116,6 @@ a{
     justify-content: center;
 }
 
-p{
-  font-weight: 500;
-  font-style: normal;
-  font-size: 75px;
-  margin: 10px; 
-}
-
 .three-column-item img{
     border-radius: 15px;
 }
@@ -130,37 +146,51 @@ p{
 form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     background-color: #f2f2f218;
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px;            /* Rounded corners */
     width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-bottom: 7%;
 }
 input{
-    width: 400px;   /* Sets the width */
-    height: 30px;   /* Sets the height */
-    padding: 10px;  /* Adds internal spacing */
-    font-size: 25px; /* Adjusts the text size */
-    border: none;              /* No border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;  
+    width: 400px;           /* Sets the width */
+    height: 30px;           /* Sets the height */
+    padding: 10px;          /* Adds internal spacing */
+    font-size: 30px;        /* Adjusts the text size */
+    border: none;           /* No border */
+    border-radius: 5px;     /* Rounded corners */
+    cursor: pointer;
 }
 textarea {
   width: 400px;   /* Sets the width */
   height: 250px;  /* Sets the height */
   padding: 15px;  /* Adds internal spacing */
-  font-size: 25px; /* Adjusts the text size */
+  font-size: 30px; /* Adjusts the text size */
   border: none;              /* No border */
   border-radius: 5px;        /* Rounded corners */
   cursor: pointer;  
 }
 button {
-  background-color: #6f90fc; /* Green background */
-  color: rgb(255, 255, 255);               /* White text */
-  padding: 10px 90px;        /* Padding */
+  background-color: #6f90fc; /* Button background color */
+  color: rgb(255, 255, 255); /* Text color */
+  padding: 20px 90px;       /* Padding */
   border: none;              /* No border */
   border-radius: 5px;        /* Rounded corners */
   cursor: pointer;           /* Pointer cursor on hover */
-    
+  margin-bottom: 10%;
+}
+
+footer{
+    text-align: center;
+    position: relative;
+    padding: 1px;
+    width: 100%;
+}
+
+span{
+    font-size: 25px;
+    color: black;
 }
