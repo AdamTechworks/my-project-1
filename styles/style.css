@@ -4,10 +4,40 @@ html{
 
 body{
     background-image: url(../images/Gogettta.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
-    background-attachment: fixed;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body.bg-gallery{
+    background-image: url(../images/kame-house.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body.bg-contact{
+    background-image: url(../images/goku-and-vegeta.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body.bg-bio{
+    background-image: url(../images/goku-and-dragon-ball-zu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-attachment: scroll;
     margin: 0;
     padding: 0;
 }
@@ -15,10 +45,11 @@ body{
 /* Headings and Paragraphs */
 h1 { /*Home Page Title*/
   font-family: "Ephesis", cursive;
-  font-weight: 500;
-  font-size: 120px;
+  font-weight: 400;
+  font-size: 160px;
   padding-left: 25px;
-  margin-bottom: -5%;
+  margin-top: 50px;
+  margin-bottom: -4%;
 }
 
 h2 { /*Page Titles*/
@@ -36,9 +67,20 @@ h3{ /*Gallery Image Titles*/
   margin: 10px; 
 }
 
-.intro{
-    width: 50%;
+h4 { /*Home Page Paragraph Heading*/
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 150px;
+  margin-bottom: -5%;
+  padding-left: 25px;
+  justify-content: relative;
+}
+
+.intro{ /*Home Page Intro Paragraph*/
+    width: 45%;
     margin-left: -40px; /* Adjusts intro paragraph position */
+    padding-bottom: 300px;
 }
 
 p{ /*Bio & Gallery Paragraphs*/
@@ -61,6 +103,9 @@ a{
 .header-nav-menu{ /*Navigation for home page*/
     margin: 0;
     padding: 0;
+    list-style: none;
+    display: flex;
+
 }
 
 .header-menu-item{
@@ -73,6 +118,7 @@ a{
     padding: 0;
     list-style: none;
     display: flex;
+    background-color: #f2f2f20c;
 }
 
 /* Gallery Layout */
@@ -185,12 +231,9 @@ button {
 
 footer{
     text-align: center;
+    font-size: 30px;
+    background-color: #f2f2f20c;
     position: relative;
     padding: 1px;
     width: 100%;
-}
-
-span{
-    font-size: 25px;
-    color: black;
 }
