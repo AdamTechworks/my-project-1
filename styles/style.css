@@ -7,9 +7,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
-    background-attachment: scroll;
-    margin: 0;
-    padding: 0;
+    background-attachment: local;
 }
 
 body.bg-gallery{
@@ -18,8 +16,6 @@ body.bg-gallery{
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: scroll;
-    margin: 0;
-    padding: 0;
 }
 
 body.bg-contact{
@@ -28,8 +24,6 @@ body.bg-contact{
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: scroll;
-    margin: 0;
-    padding: 0;
 }
 
 body.bg-bio{
@@ -38,79 +32,76 @@ body.bg-bio{
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: scroll;
-    margin: 0;
-    padding: 0;
 }
 
-/* Headings and Paragraphs */
 h1 { /*Home Page Title*/
-  font-family: "Ephesis", cursive;
-  font-weight: 400;
-  font-size: 160px;
-  padding-left: 25px;
-  margin-top: 50px;
-  margin-bottom: -4%;
+    font-family: "Ephesis", cursive;
+    font-weight: 400;
+    font-size: 130px;
+    padding-top: 500px;
+    margin-top: 50px;
+    margin-bottom: -4%;
+    text-align: center;
 }
 
 h2 { /*Page Titles*/
-  font-family: "Ephesis", cursive;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 200px;
-  margin-left: 5%;
+    font-family: "Ephesis", cursive;
+    font-weight: 500;
+    font-size: 200px;
+    font-style: normal;
+    text-align: center;
 }
 
 h3{ /*Gallery Image Titles*/
-  font-weight: 500;
-  font-style: italic;
-  font-size: 45px;
-  margin: 10px; 
+    font-weight: 500;
+    font-style: italic;
+    font-size: 45px;
+    margin: 10px;
 }
 
 h4 { /*Home Page Paragraph Heading*/
-  font-family: "Ephesis", cursive;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 150px;
-  margin-bottom: -5%;
-  padding-left: 25px;
-  justify-content: relative;
-}
-
-.intro{ /*Home Page Intro Paragraph*/
-    width: 45%;
-    margin-left: -40px; /* Adjusts intro paragraph position */
-    padding-bottom: 300px;
+    font-family: "Ephesis", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 150px;
+    margin-bottom: -5%;
+    padding-left: 25px;
+    justify-content: relative;
 }
 
 p{ /*Bio & Gallery Paragraphs*/
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
-  padding: 20px;
-  text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Navigation Menu*/
-
-a{
+a{ /*Navigation Links*/
     text-decoration: none;
     color: black;
-    font-size: 80px;
+    font-size: 50px;
     font-family: "Ephesis", cursive;
+}
+
+nav{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-nav-menu{ /*Navigation for home page*/
     margin: 0;
-    padding: 0;
+    padding-bottom: 270px;
     list-style: none;
     display: flex;
-
+    text-align: center;
 }
 
-.header-menu-item{
+.header-menu-item{ /*Navigation Menu Items*/
     margin: 0;
     padding: 25px;
+
 }
 
 .header-nav-menu2{ /*Navigation for bio, contact, gallery*/
@@ -118,33 +109,27 @@ a{
     padding: 0;
     list-style: none;
     display: flex;
-    background-color: #f2f2f20c;
+    background-color: #f2f2f215;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
 }
 
 /* Gallery Layout */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
 }
 
-.gallery-background{
-    background-image: url(../images/Goku\ black.png);
-    padding: 20px;
-    border-radius: 10px;
-    width: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
-
-.multi-column-container{
+.multi-column-container{ /*Three Column Gallery Layout*/
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.three-column-item{
+.three-column-item{ /*Individual Gallery Items*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,50 +141,26 @@ a{
     margin: 20px;
 }
 
-.three-column-item h2{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.three-column-item img{
-    border-radius: 15px;
-}
-
-.three-column-item img:hover {
+.three-column-item img:hover { /*Image Hover Effect*/
     transform: scale(1.8);
     transition: transform 0.5s ease;
     border-radius: 15px; 
 }
 
-.img-thumbnail{
+.img-thumbnail{ /*Gallery Image Styling*/
     border-radius: 15px;
     box-shadow: 1px 3px 20px 5px rgba(0, 0, 0, 0.534);
 }
-
-.thumb img {
-  width: 100%;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.thumb img:hover {
-  transform: scale(1.05);
-}
-
 
 /* Contact Form */
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-color: #f2f2f218;
     border-radius: 10px;            /* Rounded corners */
-    width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 5%;
-    margin-bottom: 7%;
+    padding: 30px;
+    gap: 30px;
 }
 input{
     width: 400px;           /* Sets the width */
@@ -211,29 +172,27 @@ input{
     cursor: pointer;
 }
 textarea {
-  width: 400px;   /* Sets the width */
-  height: 250px;  /* Sets the height */
-  padding: 15px;  /* Adds internal spacing */
-  font-size: 30px; /* Adjusts the text size */
-  border: none;              /* No border */
-  border-radius: 5px;        /* Rounded corners */
-  cursor: pointer;  
+    width: 400px;   /* Sets the width */
+    height: 250px;  /* Sets the height */
+    padding: 15px;  /* Adds internal spacing */
+    font-size: 30px; /* Adjusts the text size */
+    border: none;              /* No border */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;  
 }
 button {
-  background-color: #6f90fc; /* Button background color */
-  color: rgb(255, 255, 255); /* Text color */
-  padding: 20px 90px;       /* Padding */
-  border: none;              /* No border */
-  border-radius: 5px;        /* Rounded corners */
-  cursor: pointer;           /* Pointer cursor on hover */
-  margin-bottom: 10%;
+    background-color: #6f90fc; /* Button background color */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 20px 90px;       /* Padding */
+    margin-bottom: 10%;
+    border: none;              /* No border */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
 }
 
 footer{
     text-align: center;
-    font-size: 30px;
-    background-color: #f2f2f20c;
+    font-size:20px;
     position: relative;
-    padding: 1px;
     width: 100%;
 }
