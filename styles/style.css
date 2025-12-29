@@ -77,6 +77,12 @@ p{ /*Bio & Gallery Paragraphs*/
     text-align: center;
 }
 
+nav{  /*Navigation Bar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 a{ /*Navigation Links*/
     text-decoration: none;
     color: black;
@@ -84,13 +90,7 @@ a{ /*Navigation Links*/
     font-family: "Ephesis", cursive;
 }
 
-nav{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-nav-menu{ /*Navigation for home page*/
+.header-nav-menu{     /*Navigation for Home Page*/
     margin: 0;
     padding-bottom: 270px;
     list-style: none;
@@ -98,13 +98,7 @@ nav{
     text-align: center;
 }
 
-.header-menu-item{ /*Navigation Menu Items*/
-    margin: 0;
-    padding: 25px;
-
-}
-
-.header-nav-menu2{ /*Navigation for bio, contact, gallery*/
+.header-nav-menu2{     /*Navigation for Bio, Contact, Gallery*/
     margin: 0;
     padding: 0;
     list-style: none;
@@ -115,11 +109,10 @@ nav{
     justify-content: center;
 }
 
-/* Gallery Layout */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
+.header-menu-item{      /*Navigation Menu Items*/
+    margin: 0;
+    padding: 25px;
+
 }
 
 .multi-column-container{ /*Three Column Gallery Layout*/
@@ -142,7 +135,7 @@ nav{
 }
 
 .three-column-item img:hover { /*Image Hover Effect*/
-    transform: scale(1.8);
+    transform: scale(1.2);
     transition: transform 0.5s ease;
     border-radius: 15px; 
 }
@@ -150,6 +143,54 @@ nav{
 .img-thumbnail{ /*Gallery Image Styling*/
     border-radius: 15px;
     box-shadow: 1px 3px 20px 5px rgba(0, 0, 0, 0.534);
+}
+
+/* Hide the actual checkbox input */
+.popover-status {
+    display: none;
+}
+
+/* Style the original thumbnail image */
+.thumbnail {
+    width: auto;
+    height: 600px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* Style the pop-up content container */
+.popover-content {
+    display: none; /* Hide the pop-up initially */
+    position: fixed; /* Position over everything else */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Allows clicking overlay to close */
+}
+
+/* Style the image inside the pop-up */
+.popover-content img {
+    display: cover;
+    border-radius: 15px;
+}
+
+/* Show the pop-up when its corresponding checkbox is checked */
+.popover-status:checked + .popover-trigger .popover-content {
+    display: flex; /* or block, depending on desired layout */
+    transform: scale(1.0);
+}
+
+.bio-container { /* Bio Page Container */
+    background-color: #f2f2f215; /* Semi-transparent background */
+    border-radius: 15px;          /* Rounded corners */
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 90%;
 }
 
 /* Contact Form */
