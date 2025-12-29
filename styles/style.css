@@ -7,7 +7,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
-    background-attachment: local;
+    background-attachment: scroll;
 }
 
 body.bg-gallery{
@@ -30,15 +30,16 @@ body.bg-contact{
     background-size: fixed;
     background-repeat: no-repeat;
     background-position: center fixed;
-    background-attachment: local;
+    background-attachment: scroll;
 }
 
 h1 { /*Home Page Title*/
     font-family: "Ephesis", cursive;
     font-weight: 400;
-    font-size: 130px;
+    font-size: 150px;
     padding-top: 500px;
     margin-top: 50px;
+    margin-bottom: 0%;
     text-align: center;
 }
 
@@ -93,6 +94,7 @@ a{ /*Navigation Links*/
     list-style: none;
     display: flex;
     text-align: center;
+    margin-top: 0%;
 }
 
 .header-nav-menu2{     /*Navigation for Bio, Contact, Gallery*/
