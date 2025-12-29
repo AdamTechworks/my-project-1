@@ -18,20 +18,19 @@ body.bg-gallery{
     background-attachment: scroll;
 }
 
-body.bg-contact{
-    background-image: url(../images/goku-and-vegeta.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center fixed;
-    background-attachment: scroll;
-}
-
 body.bg-bio{
     background-image: url(../images/goku-and-dragon-ball-zu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: scroll;
+}
+body.bg-contact{
+    background-image: url(../images/db-bg.jpg);
+    background-size: fixed;
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-attachment: local;
 }
 
 h1 { /*Home Page Title*/
@@ -40,7 +39,6 @@ h1 { /*Home Page Title*/
     font-size: 130px;
     padding-top: 500px;
     margin-top: 50px;
-    margin-bottom: -4%;
     text-align: center;
 }
 
@@ -91,7 +89,6 @@ a{ /*Navigation Links*/
 }
 
 .header-nav-menu{     /*Navigation for Home Page*/
-    margin: 0;
     padding-bottom: 270px;
     list-style: none;
     display: flex;
@@ -193,6 +190,14 @@ a{ /*Navigation Links*/
     max-width: 90%;
 }
 
+.contact-container { /* Contact Page Container */
+    background-color: #f2f2f215; /* Semi-transparent background */
+    border-radius: 15px;          /* Rounded corners */
+    padding: 5px;
+    margin: 50px auto;
+    max-width: 40%;
+}
+
 /* Contact Form */
 form{
     display: flex;
@@ -211,6 +216,7 @@ input{
     border: none;           /* No border */
     border-radius: 5px;     /* Rounded corners */
     cursor: pointer;
+    color: rgb(230, 93, 1); /* Text color */
 }
 textarea {
     width: 400px;   /* Sets the width */
@@ -219,11 +225,13 @@ textarea {
     font-size: 30px; /* Adjusts the text size */
     border: none;              /* No border */
     border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;  
+    cursor: pointer;
+    color: rgb(230, 93, 1); /* Text color */
 }
 button {
-    background-color: #6f90fc; /* Button background color */
-    color: rgb(255, 255, 255); /* Text color */
+    background-color: #113cc9; /* Button background color */
+    color: white;              /* Button text color */
+    font-size: 18px;         /* Text size */
     padding: 20px 90px;       /* Padding */
     margin-bottom: 10%;
     border: none;              /* No border */
