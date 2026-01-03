@@ -3,7 +3,12 @@ html{
 }
 
 body{
-    background-image: url(../images/Gogettta.png);
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    ),
+    url(../images/Gogettta.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
@@ -11,7 +16,12 @@ body{
 }
 
 body.bg-gallery{
-    background-image: url(../images/kame-house.webp);
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,0.4),
+        rgba(255,255,255,0.4)
+    ), 
+    url(../images/kame-house.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
@@ -19,14 +29,24 @@ body.bg-gallery{
 }
 
 body.bg-bio{
-    background-image: url(../images/goku-and-dragon-ball-zu.jpg);
+    background-image: 
+        linear-gradient(
+        rgba(255,255,255,0.4),
+        rgba(255,255,255,0.4)
+    ),
+    url(../images/goku-and-dragon-ball-zu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: scroll;
 }
 body.bg-contact{
-    background-image: url(../images/db-bg.jpg);
+    background-image: 
+        linear-gradient(
+        rgba(255,255,255,0.4),
+        rgba(255,255,255,0.4)
+    ),
+    url(../images/db-bg.jpg);
     background-size: fixed;
     background-repeat: no-repeat;
     background-position: center fixed;
@@ -36,10 +56,11 @@ body.bg-contact{
 h1 { /*Home Page Title*/
     font-family: "Ephesis", cursive;
     font-weight: 400;
-    font-size: 150px;
+    font-size: 200px;
     padding-top: 500px;
-    margin-top: 50px;
-    margin-bottom: 0%;
+    margin-top: 0px;
+    padding-bottom: none;
+    margin-bottom: 0px;
     text-align: center;
 }
 
@@ -49,6 +70,7 @@ h2 { /*Page Titles*/
     font-size: 200px;
     font-style: normal;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 h3{ /*Gallery Image Titles*/
@@ -68,7 +90,7 @@ h4 { /*Home Page Paragraph Heading*/
     justify-content: relative;
 }
 
-p{ /*Bio & Gallery Paragraphs*/
+.bio-paragraphs{ /*Bio & Gallery Paragraphs*/
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
@@ -85,23 +107,26 @@ nav{  /*Navigation Bar*/
 a{ /*Navigation Links*/
     text-decoration: none;
     color: black;
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Ephesis", cursive;
 }
 
 .header-nav-menu{     /*Navigation for Home Page*/
-    padding-bottom: 270px;
-    list-style: none;
     display: flex;
+    list-style: none;
     text-align: center;
-    margin-top: 0%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 370px;
+    padding-left: 0;
 }
 
 .header-nav-menu2{     /*Navigation for Bio, Contact, Gallery*/
+    display: flex;
     margin: 0;
     padding: 0;
-    list-style: none;
-    display: flex;
+    position: absolute;
+    top: 1px;
     background-color: #f2f2f215;
     text-align: center;
     width: 100%;
@@ -111,9 +136,17 @@ a{ /*Navigation Links*/
 .header-menu-item{      /*Navigation Menu Items*/
     margin: 0;
     padding: 25px;
+    padding-top: 0px;
+    justify-content: center;
 
 }
-
+.header-menu-item2{      /*Navigation Menu Items for Bio, Contact, Gallery*/
+    margin-top: 0;
+    padding: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    list-style: none;
+}
 .multi-column-container{ /*Three Column Gallery Layout*/
     display: flex;
     justify-content: center;
@@ -128,9 +161,9 @@ a{ /*Navigation Links*/
     justify-content: center;
     gap: 1px;
     border-radius: 15px;
-    color: rgb(41, 95, 175);
+    color: rgb(0, 0, 0);
     width: 0 auto;
-    margin: 20px;
+    padding: 20px;
 }
 
 .three-column-item img:hover { /*Image Hover Effect*/
@@ -151,7 +184,6 @@ a{ /*Navigation Links*/
 
 /* Style the original thumbnail image */
 .thumbnail {
-    width: auto;
     height: 600px;
     cursor: pointer;
     border-radius: 15px;
@@ -172,10 +204,13 @@ a{ /*Navigation Links*/
     cursor: pointer; /* Allows clicking overlay to close */
 }
 
-/* Style the image inside the pop-up */
-.popover-content img {
+.popover-content img { /* Style the image inside the pop-up */
     display: cover;
     border-radius: 15px;
+}
+
+.larger{ /* Larger image styling */
+    transform: none!important;
 }
 
 /* Show the pop-up when its corresponding checkbox is checked */
@@ -195,50 +230,64 @@ a{ /*Navigation Links*/
 .contact-container { /* Contact Page Container */
     background-color: #f2f2f215; /* Semi-transparent background */
     border-radius: 15px;          /* Rounded corners */
-    padding: 5px;
+    max-width: fit-content;
+    max-height: fit-content;
     margin: 50px auto;
-    max-width: 40%;
+    padding: 30px;
+}
+
+.contact-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: disc;
+    list-style-position: inside;
+    margin: 0px auto;
+    margin-bottom: 170px;
 }
 
 /* Contact Form */
 form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;            /* Rounded corners */
-    padding: 30px;
-    gap: 30px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack form rows vertically */
+    justify-content: center; /* Center the form */
+    align-items: center; /* Center the form */
+    padding: 30px; /* Padding around the form */
+    gap: 30px; /* Space between form rows */
 }
+
 input{
-    width: 400px;           /* Sets the width */
-    height: 30px;           /* Sets the height */
-    padding: 10px;          /* Adds internal spacing */
-    font-size: 30px;        /* Adjusts the text size */
+    width: 100%;           /* Sets the width */
+    font-size: 50px;        /* Adjusts the text size */
     border: none;           /* No border */
-    border-radius: 5px;     /* Rounded corners */
+    border-bottom: 1px solid black; /* Bottom border only */
     cursor: pointer;
     color: rgb(230, 93, 1); /* Text color */
+    background-color: transparent;
+    outline: none;
 }
 textarea {
-    width: 400px;   /* Sets the width */
-    height: 250px;  /* Sets the height */
-    padding: 15px;  /* Adds internal spacing */
-    font-size: 30px; /* Adjusts the text size */
-    border: none;              /* No border */
-    border-radius: 5px;        /* Rounded corners */
+    width: 100%;           /* Sets the width */
+    font-size: 52px;        /* Adjusts the text size */
+    border: none;           /* No border */
+    border-bottom: 1px solid black; /* Bottom border only */
     cursor: pointer;
     color: rgb(230, 93, 1); /* Text color */
+    background-color: transparent;
+    outline: none;
 }
+
 button {
+    max-width: 100%;           /* Sets the width */
     background-color: #113cc9; /* Button background color */
-    color: white;              /* Button text color */
+    color: rgb(230, 93, 1);              /* Button text color */
     font-size: 18px;         /* Text size */
-    padding: 20px 90px;       /* Padding */
-    margin-bottom: 10%;
+    text-align: center;
+    padding: 10px 170px 10px 170px;     /* Padding */
     border: none;              /* No border */
     border-radius: 5px;        /* Rounded corners */
     cursor: pointer;           /* Pointer cursor on hover */
+    justify-content: center;
 }
 
 footer{
