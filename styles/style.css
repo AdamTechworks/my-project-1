@@ -9,9 +9,9 @@ body{
         rgba(255,255,255,0.1)
     ),
     url(../images/Gogettta.png);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center fixed;
     background-attachment: scroll;
 }
 
@@ -22,9 +22,9 @@ body.bg-gallery{
         rgba(255,255,255,0.4)
     ), 
     url(../images/kame-house.webp);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center fixed;
     background-attachment: scroll;
 }
 
@@ -34,22 +34,22 @@ body.bg-bio{
         rgba(255,255,255,0.4),
         rgba(255,255,255,0.4)
     ),
-    url(../images/goku-and-dragon-ball-zu.jpg);
+    url(../images/namek.jpg);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center fixed;
     background-attachment: scroll;
 }
 body.bg-contact{
     background-image: 
         linear-gradient(
         rgba(255,255,255,0.4),
-        rgba(255,255,255,0.4)
+        rgba(255, 255, 255, 0.4)
     ),
     url(../images/db-bg.jpg);
-    background-size: fixed;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center fixed;
     background-attachment: scroll;
 }
 
@@ -59,24 +59,24 @@ h1 { /*Home Page Title*/
     font-size: 200px;
     padding-top: 500px;
     margin-top: 0px;
-    padding-bottom: none;
+    padding-bottom: 0px;
     margin-bottom: 0px;
     text-align: center;
 }
 
-h2 { /*Page Titles*/
+h2 { /*Bio & Gallery Page Titles*/
     font-family: "Ephesis", cursive;
     font-weight: 500;
     font-size: 200px;
     font-style: normal;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 115px;
 }
 
 h3{ /*Gallery Image Titles*/
     font-weight: 500;
     font-style: italic;
-    font-size: 45px;
+    font-size: 35px;
     margin: 10px;
 }
 
@@ -87,7 +87,17 @@ h4 { /*Home Page Paragraph Heading*/
     font-size: 150px;
     margin-bottom: -5%;
     padding-left: 25px;
-    justify-content: relative;
+    justify-content: center;
+}
+
+h5 { /*Contact Page Headings*/
+    font-family: "Ephesis", cursive;
+    font-weight: 500;
+    font-size: 200px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 170px;
+    margin-bottom: 0px;
 }
 
 .bio-paragraphs{ /*Bio & Gallery Paragraphs*/
@@ -147,33 +157,106 @@ a{ /*Navigation Links*/
     padding-bottom: 0px;
     list-style: none;
 }
+
+.pic-ctn{
+    width: 100vw;
+    height: 200px;
+}
+
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 10vh auto 600px;
+  padding-bottom: 350px;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: display 22s infinite;
+  display: flex;
+  justify-content: center;
+  height: 900px;
+  width: 800px;
+}
+
+img:nth-child(2) {
+  animation-delay: 4s;
+}
+img:nth-child(3) {
+  animation-delay: 8s;
+}
+img:nth-child(4) {
+  animation-delay: 12s;
+}
+img:nth-child(5) {
+  animation-delay: 16s;
+}
+img:nth-child(6) {
+  animation-delay: 20s;
+}
+
+
+
+
+
+
+
+
+
+
 .multi-column-container{ /*Three Column Gallery Layout*/
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+
 }
 
-.three-column-item{ /*Individual Gallery Items*/
+.gallery-row{ /*Individual Gallery Items*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1px;
-    border-radius: 15px;
     color: rgb(0, 0, 0);
-    width: 0 auto;
-    padding: 20px;
+    width: auto;
 }
 
-.three-column-item img:hover { /*Image Hover Effect*/
+.gallery-row img:hover { /*Image Hover Effect*/
     transform: scale(1.2);
     transition: transform 0.5s ease;
-    border-radius: 15px; 
 }
 
 .img-thumbnail{ /*Gallery Image Styling*/
-    border-radius: 15px;
     box-shadow: 1px 3px 20px 5px rgba(0, 0, 0, 0.534);
 }
 
@@ -184,43 +267,41 @@ a{ /*Navigation Links*/
 
 /* Style the original thumbnail image */
 .thumbnail {
-    height: 600px;
+    height: 400px;
+    width: 300px;
     cursor: pointer;
-    border-radius: 15px;
+    padding: 15px;
 }
 
 /* Style the pop-up content container */
 .popover-content {
     display: none; /* Hide the pop-up initially */
     position: fixed; /* Position over everything else */
-    z-index: 1000;
+    z-index: 1000; /* Ensure it's on top */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.8); /* Dark overlay */
-    justify-content: center;
+    justify-content: center; /* Center the pop-up */
     align-items: center;
     cursor: pointer; /* Allows clicking overlay to close */
 }
 
 .popover-content img { /* Style the image inside the pop-up */
-    display: cover;
-    border-radius: 15px;
-}
-
-.larger{ /* Larger image styling */
+    display: block;
     transform: none!important;
 }
 
 /* Show the pop-up when its corresponding checkbox is checked */
 .popover-status:checked + .popover-trigger .popover-content {
-    display: flex; /* or block, depending on desired layout */
+    display: flex;
     transform: scale(1.0);
+    background-attachment: fixed;
 }
 
 .bio-container { /* Bio Page Container */
-    background-color: #f2f2f215; /* Semi-transparent background */
+    background-color: #f2f2f23f; /* Semi-transparent background */
     border-radius: 15px;          /* Rounded corners */
     padding: 30px;
     margin: 50px auto;
@@ -228,7 +309,7 @@ a{ /*Navigation Links*/
 }
 
 .contact-container { /* Contact Page Container */
-    background-color: #f2f2f215; /* Semi-transparent background */
+    background-color: #f2f2f23f; /* Semi-transparent background */
     border-radius: 15px;          /* Rounded corners */
     max-width: fit-content;
     max-height: fit-content;
@@ -244,6 +325,13 @@ a{ /*Navigation Links*/
     list-style-position: inside;
     margin: 0px auto;
     margin-bottom: 170px;
+}
+
+p.contact-intro {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 200px;
 }
 
 /* Contact Form */
@@ -262,9 +350,10 @@ input{
     border: none;           /* No border */
     border-bottom: 1px solid black; /* Bottom border only */
     cursor: pointer;
-    color: rgb(230, 93, 1); /* Text color */
+    color: #113cc9; /* Text color */
     background-color: transparent;
     outline: none;
+    font-style: italic;
 }
 textarea {
     width: 100%;           /* Sets the width */
@@ -272,18 +361,19 @@ textarea {
     border: none;           /* No border */
     border-bottom: 1px solid black; /* Bottom border only */
     cursor: pointer;
-    color: rgb(230, 93, 1); /* Text color */
+    color: #113cc9; /* Text color */
     background-color: transparent;
     outline: none;
+    font-style: italic;
 }
 
 button {
     max-width: 100%;           /* Sets the width */
     background-color: #113cc9; /* Button background color */
-    color: rgb(230, 93, 1);              /* Button text color */
+    color: rgb(255, 255, 255);              /* Button text color */
     font-size: 18px;         /* Text size */
     text-align: center;
-    padding: 10px 170px 10px 170px;     /* Padding */
+    padding: 30px 200px 30px 200px;     /* Padding */
     border: none;              /* No border */
     border-radius: 5px;        /* Rounded corners */
     cursor: pointer;           /* Pointer cursor on hover */
