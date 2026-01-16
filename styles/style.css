@@ -2,14 +2,14 @@ html{
     font-size: 40px
 }
 
-body{
+body.bg-home{
     background-image:
     linear-gradient(
         rgba(255,255,255,0.1),
         rgba(255,255,255,0.1)
     ),
     url(../images/gogeta.png);
-    background-position: center;
+    background-position: center 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -28,6 +28,12 @@ body.bg-gallery{
     background-attachment: scroll;
 }
 
+/* Prevent background scrolling when popover is active */
+body:has(.popover-status:checked) {
+  overflow: hidden;
+  padding-right: 15px; /* helps prevent content shift */
+}
+
 body.bg-bio{
     background-image: 
         linear-gradient(
@@ -40,6 +46,7 @@ body.bg-bio{
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
+
 body.bg-contact{
     background-image: 
         linear-gradient(
@@ -103,15 +110,6 @@ h5 {
     text-align: center;
     margin-top: 170px;
     margin-bottom: 0px;
-}
-
-/*Bio & Gallery Paragraphs*/
-.bio-paragraphs{
-    font-weight: 400;
-    font-style: normal;
-    font-size: 50px;
-    padding: 20px;
-    text-align: center;
 }
 
 /*Navigation Bar*/
@@ -178,7 +176,7 @@ a{
   }
   10% {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0;
   }
   20% {
     transform: translateX(0);
@@ -194,8 +192,8 @@ a{
   }
 }
 
-/* Slideshow Container */
-.pic-ctn {
+/* Carousel Container */
+.carousel {
   position: relative;
   display: flex;
   justify-content: center;
@@ -205,13 +203,13 @@ a{
   padding-bottom: 350px;
 }
 
-/* Image Slideshow Animation */
-.pic-ctn > img {
+/* Carousel Animation */
+.carousel > img {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
   opacity: 0;
-  animation: display 22s infinite;
+  animation: display 24s infinite;
   display: flex;
   justify-content: center;
   height: 900px;
@@ -219,21 +217,13 @@ a{
 }
 
 /* Stagger Animation Delays for Each Image */
-img:nth-child(2) { 
-  animation-delay: 4s;
-}
-img:nth-child(3) {
-  animation-delay: 8s;
-}
-img:nth-child(4) {
-  animation-delay: 12s;
-}
-img:nth-child(5) {
-  animation-delay: 16s;
-}
-img:nth-child(6) {
-  animation-delay: 20s;
-}
+.carousel > img:nth-child(1)  { animation-delay: 0s; }
+.carousel > img:nth-child(2)  { animation-delay: 4s; }
+.carousel > img:nth-child(3)  { animation-delay: 8s; }
+.carousel > img:nth-child(4)  { animation-delay: 12s; }
+.carousel > img:nth-child(5)  { animation-delay: 16s; }
+.carousel > img:nth-child(6)  { animation-delay: 20s; }
+
 
 /*Image Hover Effect*/
 .gallery-row img:hover {
@@ -241,22 +231,9 @@ img:nth-child(6) {
     transition: transform 0.5s ease;
 }
 
-/*Gallery Image Styling*/
-.img-thumbnail{
-    box-shadow: 1px 3px 20px 5px rgba(0, 0, 0, 0.534);
-}
-
 /* Hide the actual checkbox input */
 .popover-status {
     display: none;
-}
-
-/* Style the original thumbnail image */
-.thumbnail {
-    height: 400px;
-    width: 300px;
-    cursor: pointer;
-    padding: 15px;
 }
 
 /* Style the pop-up content container */
@@ -284,10 +261,22 @@ img:nth-child(6) {
 .popover-status:checked + .popover-trigger .popover-content {
     display: flex;
     transform: scale(1.0);
-    background-attachment: fixed;
 }
 
-/*Three Column Gallery Layout*/
+/* Style the original thumbnail image */
+.thumbnail {
+    height: 400px;
+    width: 300px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/*Gallery Image Styling*/
+.img-thumbnail{
+    box-shadow: 1px 3px 20px 5px rgba(0, 0, 0, 0.534);
+}
+
+/*Gallery Layout*/
 .multi-column-container{
     display: flex;
     justify-content: center;
@@ -314,10 +303,25 @@ img:nth-child(6) {
     max-width: 90%;
 }
 
+/*Bio & Gallery Paragraphs*/
+.bio-paragraphs{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Contact Form */
 .card.bg-transparent {
   backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.082) !important;
+  background-color: rgba(255, 255, 255, 0.233) !important;
+}
+
+/* Contact Page Intro Text */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 150px;
 }
 
 /* Form Control Styles */

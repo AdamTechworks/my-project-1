@@ -9,42 +9,43 @@
         <link rel="stylesheet" href="./styles/style.css">
     <title>Gallery</title>
 </head>
-<!--First row of images-->
 <body class="bg-gallery">
     <header>
-            <nav>
-                <ul class="header-nav-menu2">
-                    <li class="header-menu-item2"><a href="./index.html">Home</a></li>
-                    <li class="header-menu-item2"><a href="./gallery.html">Gallery</a></li>
-                    <li class="header-menu-item2"><a href="./bio.html">Bio</a></li>
-                    <li class="header-menu-item2"><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        <h2>Gallery</h2>
+<!--Navigation Menu--> 
+        <nav>
+            <ul class="header-nav-menu2">
+                <li class="header-menu-item2"><a href="./index.html">Home</a></li>
+                <li class="header-menu-item2"><a href="./gallery.html">Gallery</a></li>
+                <li class="header-menu-item2"><a href="./bio.html">Bio</a></li>
+                <li class="header-menu-item2"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    <h2>Gallery</h2>
     </header>
-        <div class="pic-ctn">
+    
+<!--Carousel Images-->
+        <div class="carousel">
                 <img src="./images/gogeta-cropped.jpg" alt="Gogeta" class="pic">
                 <img src="./images/goku-blue.png" alt="Goku SSGB" class="pic">
                 <img src="./images/goku-black-cropped.jpg" alt="Goku Black" class="pic">
                 <img src="./images/goku-ssj4.png" alt="Goku SSJ4" class="pic">
                 <img src="./images/vegeta.png" alt="Vegeta" class="pic">
-                <img src="./images/gohan.png" alt="Gohan" class="pic">        
-        </div>
+                <img src="./images/gohan.png" alt="Gohan" class="pic">      
+        </div>  
 
-    <section id="gallery">
+<!--Gallery Images-->
+    <div id="gallery">
         <div class="multi-column-container">
-
         <section class="gallery-row">
                 <input type="checkbox" id="img-pop-up" class="popover-status">
                 <label for="img-pop-up" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/gogeta-cropped.jpg" class="thumbnail" width="500px" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/gogeta-cropped.jpg" class="thumbnail" width="500" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/gogeta.png" class="larger" width="1300px" height="1100px" alt="Larger image view">
+                    <img src="./images/gogeta.png" class="larger" width="1300" height="1100" alt="Larger image view">
                 </span>
                 </label> 
-                </input>                   
             <h3>Gogeta</h3>
         </section>
 
@@ -52,13 +53,12 @@
                 <input type="checkbox" id="img-pop-up-2" class="popover-status">
                 <label for="img-pop-up-2" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/goku-blue.png" class="thumbnail" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/goku-blue.png" class="thumbnail" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/goku-blue.png" width="1000px" height="1090px" alt="Larger image view">
+                    <img src="./images/goku-blue.png" width="1000" height="1090" alt="Larger image view">
                 </span>
-                </label> 
-                </input>                   
+                </label>
             <h3>Goku SSGB</h3>
         </section>
 
@@ -66,13 +66,12 @@
                 <input type="checkbox" id="img-pop-up-3" class="popover-status">
                 <label for="img-pop-up-3" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/goku-black-cropped.jpg" class="thumbnail" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/goku-black-cropped.jpg" class="thumbnail" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/goku-black.png" class="larger-image" width="800px" height="1200px" alt="Larger image view">
+                    <img src="./images/goku-black.png" class="larger-image" width="800" height="1200" alt="Larger image view">
                 </span>
-                </label> 
-                </input>                   
+                </label>                 
             <h3>Goku Black</h3>
         </section>
 
@@ -80,13 +79,12 @@
                 <input type="checkbox" id="img-pop-up-4" class="popover-status">
                 <label for="img-pop-up-4" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/goku-ssj4.png" class="thumbnail" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/goku-ssj4.png" class="thumbnail" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/goku-ssj4.png" width="1000px" height="1200px" alt="Larger image view">
+                    <img src="./images/goku-ssj4.png" width="1000" height="1200" alt="Larger image view">
                 </span>
-                </label> 
-                </input>                   
+                </label>        
             <h3>Goku SS4</h3>
         </section>
 
@@ -94,13 +92,12 @@
                 <input type="checkbox" id="img-pop-up-5" class="popover-status">
                 <label for="img-pop-up-5" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/vegeta.png" class="thumbnail" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/vegeta.png" class="thumbnail" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/vegeta.png" width="900px" height="1200px" alt="Larger image view">
+                    <img src="./images/vegeta.png" width="900" height="1200" alt="Larger image view">
                 </span>
-                </label> 
-                </input>                   
+                </label>                 
             <h3>Vegeta Ultra Ego</h3>
         </section>
 
@@ -108,19 +105,19 @@
                 <input type="checkbox" id="img-pop-up-6" class="popover-status">
                 <label for="img-pop-up-6" class="popover-trigger">
                     <!-- The original, smaller image -->
-                    <img src="./images/gohan.png" class="thumbnail" alt="Click to view larger image" class="thumbnail">
+                    <img src="./images/gohan.png" class="thumbnail" alt="Click to view larger image">
                 <span class="popover-content">
                     <!-- The larger, "popped up" image -->
-                    <img src="./images/gohan.png" width="950px" height="1200px" alt="Larger image view">
+                    <img src="./images/gohan.png" width="950" height="1200" alt="Larger image view">
                 </span>
-                </label> 
-                </input>                   
+                </label>                 
             <h3>Beast Gohan</h3>
         </section>
         
     </div>
-    </section>
+</div>
 
+<!--Footer Section-->
     <footer>
         <a href="https://www.facebook.com/wonderverseink/" target="_blank" aria-label="Follow on Instagram">
             <i class="fab fa-instagram"></i>
