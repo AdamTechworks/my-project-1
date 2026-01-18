@@ -26,6 +26,7 @@ body.bg-gallery{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    overflow-x: hidden;
 }
 
 /* Prevent background scrolling when popover is active */
@@ -191,6 +192,8 @@ a{
     opacity: 0;
   }
 }
+
+
 
 /* Carousel Container */
 .carousel {
