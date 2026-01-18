@@ -26,7 +26,6 @@ body.bg-gallery{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    overflow-x: hidden;
 }
 
 /* Prevent background scrolling when popover is active */
@@ -200,11 +199,13 @@ a{
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: auto;
+  width: 100%;            /* was 100vw */
+  max-width: 100%;
+  height: auto;          /* give it a defined height since images are absolute */
   margin: 10vh auto 600px;
-  padding-bottom: 350px;
+  padding-bottom: 400px;
 }
+
 
 /* Carousel Animation */
 .carousel > img {
@@ -267,12 +268,13 @@ a{
 }
 
 /* Style the original thumbnail image */
-.thumbnail {
-    height: 400px;
-    width: 300px;
-    cursor: pointer;
-    padding: 15px;
+.thumbnail{
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;      /* similar to 300x400 */
+  object-fit: cover;
 }
+
 
 /*Gallery Image Styling*/
 .img-thumbnail{
@@ -281,10 +283,13 @@ a{
 
 /*Gallery Layout*/
 .multi-column-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;          /* ✅ allows wrapping to next line */
+  justify-content: center;
+  align-items: flex-start;  /* better for multiple rows */
+  gap: 20px;                /* spacing without padding hacks */
 }
+
 
 /*Individual Gallery Items*/
 .gallery-row{
@@ -295,6 +300,24 @@ a{
     gap: 1px;
     color: rgb(0, 0, 0);
     width: auto;
+    flex: 1 1 320px;          /* ✅ grows, shrinks, wraps; 320px ideal card size */
+    max-width: 360px;         /* optional: stops them getting too wide on huge screens */
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .gallery-row {
+    flex: 1 1 calc(50% - 20px); /* exactly 2 per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* 1-up layout */
+@media (max-width: 500px) {
+  .gallery-row {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 /* Bio Page Container */
