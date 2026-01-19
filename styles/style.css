@@ -201,7 +201,7 @@ a{
   justify-content: center;
   width: 100%;            /* was 100vw */
   max-width: 100%;
-  height: auto;          /* give it a defined height since images are absolute */
+  height: auto;          /* defined height since images are absolute */
   margin: 10vh auto 600px;
   padding-bottom: 400px;
 }
@@ -286,8 +286,8 @@ a{
   display: flex;
   flex-wrap: wrap;          /* ✅ allows wrapping to next line */
   justify-content: center;
-  align-items: flex-start;  /* better for multiple rows */
-  gap: 20px;                /* spacing without padding hacks */
+  align-items: flex-start;  /*  multiple rows */
+  gap: 20px;                /* spacing without padding */
 }
 
 
@@ -300,7 +300,7 @@ a{
     gap: 1px;
     color: rgb(0, 0, 0);
     width: auto;
-    flex: 1 1 320px;          /* ✅ grows, shrinks, wraps; 320px ideal card size */
+    flex: 1 1 320px;          /* ✅ grows, shrinks, wraps; 320px card size */
     max-width: 360px;         /* optional: stops them getting too wide on huge screens */
     box-sizing: border-box;
 }
@@ -346,8 +346,8 @@ a{
 
 /* Contact Page Intro Text */
 .contact-intro {
-    text-align: center;
-    margin-bottom: 150px;
+  text-align: center;
+  margin-bottom: 150px;
 }
 
 /* Form Control Styles */
@@ -375,8 +375,6 @@ a{
 .bg-audio:hover{
   opacity: 1;
 }
-
-
 
 /* Footer Styling */
 footer{
