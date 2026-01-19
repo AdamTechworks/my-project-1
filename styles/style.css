@@ -31,7 +31,7 @@ body.bg-gallery{
 /* Prevent background scrolling when popover is active */
 body:has(.popover-status:checked) {
   overflow: hidden;
-  padding-right: 15px; /* helps prevent content shift */
+  padding-right: 15px;
 }
 
 body.bg-bio{
@@ -271,7 +271,7 @@ a{
 .thumbnail{
   width: 100%;
   max-width: 300px;
-  aspect-ratio: 3 / 4;      /* similar to 300x400 */
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
@@ -284,9 +284,9 @@ a{
 /*Gallery Layout*/
 .multi-column-container{
   display: flex;
-  flex-wrap: wrap;          /* ✅ allows wrapping to next line */
+  flex-wrap: wrap;          /* allows wrapping to next line */
   justify-content: center;
-  align-items: flex-start;  /*  multiple rows */
+  align-items: flex-start;  /* multiple rows */
   gap: 20px;                /* spacing without padding */
 }
 
@@ -300,14 +300,14 @@ a{
     gap: 1px;
     color: rgb(0, 0, 0);
     width: auto;
-    flex: 1 1 320px;          /* ✅ grows, shrinks, wraps; 320px card size */
-    max-width: 360px;         /* optional: stops them getting too wide on huge screens */
+    flex: 1 1 320px;          /* grows, shrinks, wraps; 320px card size */
+    max-width: 360px;         /* stops them getting too wide on huge screens */
     box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .gallery-row {
-    flex: 1 1 calc(50% - 20px); /* exactly 2 per row */
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
     max-width: calc(50% - 20px);
   }
 }
@@ -361,6 +361,7 @@ a{
   border: 4px solid #446ef8;
 }
 
+ /* Background Audio Player Styling */
 .bg-audio{
   position: fixed;
   top: 16px;
@@ -372,6 +373,7 @@ a{
   z-index: 500;
 }
 
+ /* Background Audio Player Hover Effect */
 .bg-audio:hover{
   opacity: 1;
 }
